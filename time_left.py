@@ -1,15 +1,12 @@
 age = input("What is your current age?\n")
 
-age_in_days = int(age) * 365
-age_in_weeks = int(age) * 52
-age_in_months = int(age) * 12
+age_as_int = int(age)
 
-ninety_in_days = 90 * 365
-ninety_in_weeks = 90 * 52
-ninety_in_months = 90 * 12
+years_remaining = 90 - age_as_int
 
-days_left = ninety_in_days - age_in_days
-weeks_left = ninety_in_weeks - age_in_weeks
-months_left = ninety_in_months - age_in_months
+days_remaining = years_remaining * 365
+weeks_remaining = years_remaining * 52
+months_remaining = years_remaining * 12
 
-print(f"You have {days_left} days, {weeks_left} weeks and {months_left} months left.")
+message = f"You have {days_remaining} days, {weeks_remaining} weeks and {months_remaining} months left."
+print(message)
